@@ -7,7 +7,7 @@ from myapp.models import Info
 def index(request):
     return render(request, 'index.html')
 
-def display(request):
+def display(request): #data show in displaypage
     obj=Info.objects.all()
     return render(request, 'display.html',{'todolist':obj})
 
