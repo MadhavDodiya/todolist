@@ -7,7 +7,40 @@
 </head>
 <body>
     <form action="update" method="post">
-        
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h1 class="text-center p-3">Update list</h1>
+    
+                    <form action="update" method="post">
+                        {% csrf_token %}
+                        <label for="n" class="fs-5">Name:</label>
+                        <input type="text" placeholder="enter the task name" id="n" name="fname" class="w-100 p-2 border-danger border-2 rounded-2"><br><br>
+                        <label for="st" class="fs-5">Start Date:</label>
+                        <input type="date" id="st" name="sdate" class="w-100 p-2 border-danger border-2 rounded-2"><br><br>
+                        <label for="en" class="fs-5">End Date:</label>
+                        <input type="date" id="ed" name="edate" class="w-100 p-2 border-danger border-2 rounded-2"><br><br>
+    
+                        <select name="status" class="dropdown-toggle w-100">
+                            <option>todo</option>
+                            <option>inprogress</option>
+                            <option>completed</option>
+                        </select><br><br>
+    
+                        <center>
+                            <button type="submit" class="btn btn-danger btn-outline-dark">Submit</button><br><br>
+                    </form>
+    
+                    <form action="display">
+                        <button class="btn btn-dark btn-outline-danger">SHOW DATA</button>
+                    </form>
+                    </center>
+    
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
     </form>
 </body>
 </html>

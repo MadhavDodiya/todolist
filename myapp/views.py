@@ -19,7 +19,7 @@ def todo(request):
     
     obj=Info(firstname=a,startdate=b,enddate=c,status=d)
     obj.save()
-    return redirect('/index')
+    return redirect('/')
 
 def delete(request):
     a=request.POST.get('id')
@@ -28,3 +28,6 @@ def delete(request):
     obj.delete()
     
     return redirect('/display')
+
+def update(request):
+    return render(request, 'update.html')
